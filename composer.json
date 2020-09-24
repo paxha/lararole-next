@@ -1,0 +1,52 @@
+{
+    "name": "paxha/lararole",
+    "description": "Lararole is a Laravel library, provides Role Management with permissions.",
+    "type": "laravel",
+    "license": "LGPL-3.0",
+    "keywords": [
+        "laravel",
+        "laravel library",
+        "lararole",
+        "role management",
+        "user management",
+        "laravel role management",
+        "laravel user management"
+    ],
+    "authors": [
+        {
+            "name": "Hassan Raza Pasha",
+            "email": "e.hassanrazapasha@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "paxha/laravel-recursive-relationships": "^1.0",
+        "paxha/laravel-sluggable": "^1.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lararole\\LararoleServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Lararole\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lararole\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

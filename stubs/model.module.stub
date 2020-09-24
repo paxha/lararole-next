@@ -1,0 +1,26 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use RecursiveRelationships\Traits\HasRecursiveRelationships;
+
+class {{ class }} extends Model
+{
+    use HasRecursiveRelationships, Sluggable;
+
+    protected $fillable = [
+        'module_id', 'name',
+    ];
+
+    public function getParentKeyName()
+    {
+        return 'module_id';
+    }
+
+    public static function separator(): string
+    {
+        return '_';
+    }
+}
