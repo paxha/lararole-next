@@ -14,6 +14,10 @@ class LararoleServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/../config/lararole.php' => config_path('lararole.php'),
+        ], 'lararole-config');
+
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
         $this->commands([
